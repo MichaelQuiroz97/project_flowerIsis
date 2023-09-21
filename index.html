@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunflower</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=Fuggles&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fuggles&family=Great+Vibes&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+       <video controls class="video-container__video">
+           
+          <source src="recursos/You are my sunshine.mp4" type="video/mp4">
+           
+       </video>
+    </div>
+    <div class="Texto_poema">
+        <h2 class="Texto_poema__h2">Isis Dessirett Zuñiga Quinde</h2>
+        <p class="Texto_poema__p">Sabes es la primera vez que le regalo una flor amarilla alguien bueno estoy chiro jajaja asi que a mi manera quiero regalarte este detalle se que estas pasando por un mal momento y precisamente por eso lo hago quiero que sepas que ppuedes contar conmigo para lo que sea y esta es mi manera de decirte que te quiero y que eres muy importante en mi vida me hubiese gustado regalarte algo mejor pero estos son mis limites solo a lo que programación se refiere ya que lo que haria por ti abarca la cantidad de estrellas que caben en el cielo y lo que siento por ti morira el dia que deje este plano existencial asi que mientras tanto seguire en tu vida molestandote hasta que te canses y me digas que me vaya de ahi si es mi voluntad esas jodida se que no soy la mejor persona que conozcas pero a mi manera y dentro de mis posibilidades tratare de hacerte feliz no digo lo hare porque se que a veces soy insorpotable y no te mentire respecto a nada asi que mientras Dios y tu lo permitan será mi prioridad el apoyarte y no dejarte sola mujeres muchas PERO NINGUNA COMO TÚ nunca olvides </p>
+
+    </div>
+    <div id="mensaje">
+        <p></p>
+        <img src="recursos/heart.gif" class="centrar-imagen">
+        
+    </div>
+    
+    <div class="sunflower">
+        <div class="flower_wrapper">
+            <div class="flower_stem"></div>
+            <div class="flower_center"></div>
+            <div class="flower_petal flower_petal-1"></div>
+            <div class="flower_petal flower_petal-2"></div>
+            <div class="flower_petal flower_petal-3"></div>
+            <div class="flower_petal flower_petal-4"></div>
+            <div class="flower_petal flower_petal-5"></div>
+            <div class="flower_petal flower_petal-6"></div>
+            <div class="flower_petal flower_petal-7"></div>
+            <div class="flower_petal flower_petal-8"></div>
+            <div class="flower_petal flower_petal-9"></div>
+            <div class="flower_petal flower_petal-10"></div>
+            <div class="flower_petal flower_petal-11"></div>
+            <div class="flower_petal flower_petal-12"></div>
+
+            <div class="flower_leaf flower_leaf-1"></div>
+            <div class="flower_leaf flower_leaf-2"></div>
+
+            <div class="flower_light flower_light-1"></div>
+            <div class="flower_light flower_light-2"></div>
+            <div class="flower_light flower_light-3"></div>
+            <div class="flower_light flower_light-4"></div>
+            <div class="flower_light flower_light-5"></div>
+            <div class="flower_light flower_light-6"></div>
+            <div class="flower_light flower_light-7"></div>
+            <div class="flower_light flower_light-8"></div>
+        </div>
+    </div>
+
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+    <div class="light light-3"></div>
+    <div class="light light-4"></div>
+    <div class="light light-5"></div>
+    <div class="light light-6"></div>
+    <div class="light light-7"></div>
+    <div class="light light-8"></div>
+    <div class="light light-9"></div>
+    <div class="light light-10"></div>
+    <div class="light light-11"></div>
+    <div class="light light-12"></div>
+    
+    <script type="text/javascript">
+        // Espera a que se cargue la página
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.querySelector(".video-container__video");
+            var mensaje = document.getElementById("mensaje");
+            var texto = "Te Quiero Mucho";
+            var index = 0;
+
+            // Escucha el evento de finalización del video
+            video.addEventListener("ended", function() {
+                // Inicia la animación de mostrar texto letra por letra
+                mostrarTexto();
+            });
+
+            function mostrarTexto() {
+                if (index < texto.length) {
+                    mensaje.innerHTML += texto.charAt(index);
+                    index++;
+                    // Llama recursivamente a la función para mostrar la siguiente letra
+                    setTimeout(mostrarTexto, 500); // Ajusta el tiempo según tu preferencia
+                }
+            }
+        });
+    </script>
+
+
+</body>
+</html>
